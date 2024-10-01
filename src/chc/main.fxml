@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1280.0" stylesheets="@custom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chc.MainController">
+   <children>
+      <VBox layoutX="17.0" layoutY="14.0" prefHeight="587.0" prefWidth="821.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="96.0" prefWidth="200.0" spacing="8.0">
+               <children>
+                  <ImageView fitHeight="63.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/usthb_logo.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="16.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="48.0" styleClass="full-radius" text="EXTRACTION DES REGLES DE CLASSIFICATION" textFill="#3452b5" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Consolas Bold" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <JFXButton fx:id="infoBtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #3452b5; -fx-background-radius: 16;" textFill="#eeeeee">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/icons8_information_32px.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="224.0">
+                     <children>
+                        <JFXButton fx:id="uploadBtn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #3452b5; -fx-background-radius: 16;" text="Upload dataset" textFill="#eeeeee">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/icons8_upload_32px.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="16.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="538.0" prefWidth="256.0" style="-fx-background-color: white; -fx-background-radius: 16 16 0 0;">
+                     <children>
+                        <Label id="menu-label" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="350.0" text="Paramètres">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../icons/icons8_commit_git_32px_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="16.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="80.0" prefWidth="256.0">
+                                 <children>
+                                    <JFXTextField fx:id="numItersTF" labelFloat="true" prefHeight="48.0" prefWidth="200.0" promptText="Nombre d'itérations" style="-fx-prompt-text-fill: #3452b570;" styleClass="edit-text" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="10.0" layoutY="74.0" prefHeight="80.0" prefWidth="256.0">
+                                 <children>
+                                    <JFXTextField fx:id="popSizeTF" labelFloat="true" prefHeight="48.0" prefWidth="200.0" promptText="Taille de la population" style="-fx-prompt-text-fill: #3452b570;" styleClass="edit-text" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="10.0" layoutY="138.0" prefHeight="96.0" prefWidth="350.0" spacing="8.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="220.0" styleClass="full-radius" text="Probabilité de mutation (%)" textFill="#3452b5">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="64.0" prefWidth="305.0">
+                                       <children>
+                                          <JFXSlider fx:id="mutationSlider" blockIncrement="1.0" prefHeight="48.0" prefWidth="160.0" value="60.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <JFXButton fx:id="runBtn" buttonType="RAISED" defaultButton="true" prefHeight="42.0" prefWidth="128.0" style="-fx-background-color: #3452b5; -fx-background-radius: 16;" text="LANCER" textFill="#eeeeee">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../icons/icons8_Play_32px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="clearBtn" buttonType="RAISED" defaultButton="true" layoutX="74.0" layoutY="330.0" prefHeight="42.0" prefWidth="128.0" style="-fx-background-color: #3452b5; -fx-background-radius: 16;" text="EFFACER" textFill="#eeeeee">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../icons/icons8_broom_32px_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets top="16.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <effect>
+                        <DropShadow color="#003f5c" height="12.0" radius="5.5" width="12.0" />
+                     </effect>
+                  </VBox>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox fx:id="resultVB" alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" prefHeight="538.0" prefWidth="256.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="16.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <JFXTextArea fx:id="resultsTA" editable="false" focusColor="#ffa600" prefHeight="256.0" prefWidth="720.0" promptText="Les résultats s'afficheront ici" unFocusColor="#3452b5" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="8.0" />
+                                       </padding>
+                                    </JFXTextArea>
+                                    <HBox prefHeight="160.0" prefWidth="720.0">
+                                       <children>
+                                          <VBox prefHeight="160.0" prefWidth="231.0" spacing="8.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="360.0" styleClass="full-radius" text="Précision" textFill="#3452b5" VBox.vgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXSpinner fx:id="precisionSpinner" prefHeight="128.0" prefWidth="360.0" progress="0.0" startingAngle="0.0" VBox.vgrow="ALWAYS" />
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="8.0" top="8.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox layoutX="10.0" layoutY="10.0" prefHeight="160.0" prefWidth="231.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="220.0" styleClass="full-radius" text="Nombre de règles extraites" textFill="#3452b5">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="numRulesLabel" alignment="CENTER" prefHeight="128.0" prefWidth="360.0" styleClass="full-radius" text="/" textFill="#ffa600" VBox.vgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="370.0" layoutY="10.0" prefHeight="160.0" prefWidth="231.0">
+                                             <children>
+                                                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="220.0" styleClass="full-radius" text="Temps d'exécution" textFill="#3452b5">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="execTimeLabel" alignment="CENTER" prefHeight="128.0" prefWidth="360.0" styleClass="full-radius" text="/" textFill="#ffa600" VBox.vgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <effect>
+                              <DropShadow color="#003f5c" height="12.0" radius="5.5" width="12.0" />
+                           </effect>
+                        </VBox>
+                        <HBox alignment="CENTER" layoutX="-25.0" layoutY="-29.0" prefHeight="60.0" prefWidth="720.0" spacing="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label id="selected-label" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="350.0" text="Résultats" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../icons/result_grey.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="538.0" prefWidth="224.0" style="-fx-background-color: white; -fx-background-radius: 16 16 0 0;">
+                     <children>
+                        <Label id="menu-label" fx:id="datasetNameLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="350.0" text="Aucun Dataset">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../icons/icons8_database_32px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="16.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="96.0" prefWidth="256.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="220.0" styleClass="full-radius" text="Nombre d'instances" textFill="#3452b5">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="numInstLabel" alignment="CENTER" layoutX="28.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="128.0" text="/" textFill="#ffa600">
+                                       <font>
+                                          <Font name="Consolas Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="10.0" layoutY="74.0" prefHeight="96.0" prefWidth="256.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="220.0" styleClass="full-radius" text="Nombre d'attribut" textFill="#3452b5">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="numAttrsLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="128.0" text="/" textFill="#ffa600">
+                                       <font>
+                                          <Font name="Consolas Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="10.0" layoutY="138.0" prefHeight="96.0" prefWidth="256.0" spacing="8.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="48.0" prefWidth="220.0" styleClass="full-radius" text="Taille d'Apprentissage" textFill="#3452b5">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="trainLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="128.0" styleClass="full-radius" text="/" textFill="#ffa600">
+                                       <font>
+                                          <Font name="Consolas Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="10.0" layoutY="218.0" prefHeight="96.0" prefWidth="256.0" spacing="8.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="220.0" styleClass="full-radius" text="Taille du Test" textFill="#3452b5">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="testLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="128.0" styleClass="full-radius" text="/" textFill="#ffa600">
+                                       <font>
+                                          <Font name="Consolas Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets top="16.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <effect>
+                        <DropShadow color="#003f5c" height="12.0" radius="5.5" width="12.0" />
+                     </effect>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <StackPane fx:id="stackPane" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXDialog fx:id="dialog" />
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

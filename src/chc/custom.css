@@ -1,0 +1,299 @@
+
+
+.choice-box {
+
+    -fx-background-color: white;
+    -fx-mark-color: #3D4956;
+
+
+}
+
+.choice-box > .label {
+    -fx-text-fill: #3D4956;
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.choice-box .context-menu { -fx-background-color: #3452b5; }
+.choice-box .menu-item:focused { -fx-background-color: #ffa600; }
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+.choice-box .menu-item:focused > .label { -fx-text-fill: #3D4956; }
+
+#menu-label {
+    -fx-background-color: #3452b5;
+    -fx-text-fill: #eee;
+    -fx-background-radius: 8 8 0 0;
+}
+
+.primary-background{
+    -fx-background-color: #3452b5;
+    -fx-text-fill: #eeeeee;
+}
+
+.secondary-background{
+    -fx-text-fill: #3452b5;
+    -fx-background-color: #eeeeee;
+}
+
+.secondary-label{
+    -fx-text-fill: #3452b5;
+    -fx-background-color: #eeeeee;
+    -fx-alignment: center;
+    -fx-font-size: 16;
+}
+
+.secondary-label-bold{
+    -fx-font-weight: bold;
+}
+
+.full-radius{
+    -fx-background-radius: 16;
+}
+
+.label-hover:hover{
+    -fx-background-color: #c9c9c9
+}
+
+.label-selected{
+    -fx-background-color: #ffa600;
+}
+
+.edit-text{
+    -jfx-focus-color: #ffa600;
+    -jfx-unfocus-color: #3452b5;
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+    -fx-font-family: Consolas;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffa600;
+}
+
+.scroll-pane {
+    -fx-background-color: #003f5c;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #eee;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: black;
+}
+
+.param-title{
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+    -fx-text-fill: #3452b5;
+}
+
+#selected-label{
+    -fx-background-color: #3452b5;
+    -fx-text-fill: #eeeeee;
+    -fx-background-radius: 8 8 0 0;
+    -fx-cursor: hand
+}
+
+#unselected-label{
+    -fx-background-color: white;
+    -fx-text-fill: #3452b5;
+    -fx-cursor: hand;
+    -fx-border-width: 1 1 0 1;
+    -fx-border-color:#ddd;
+    -fx-border-radius: 8 8 0 0;
+    -fx-background-radius: 8 8 0 0;
+}
+
+#unselected-label:hover{
+    -fx-background-color: #dddddd;
+}
+
+.chart-plot-background {
+    -fx-background-color: #3452b5;
+}
+
+.axis {
+    -fx-font-size: 1.4em;
+    -fx-tick-label-fill: #3452b5;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+
+.axis-label {
+    -fx-text-fill: #3452b5;
+}
+
+.axis-tick-mark {
+    -fx-stroke: #ffa600;
+    -fx-stroke-width: 1;
+}
+.axis-minor-tick-mark {
+    -fx-stroke: #ff6361;
+}
+
+#menu-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: #3452b5;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ffa600;
+}
+
+#menu-btn:hover{
+    -fx-background-color: #3452b532;
+}
+
+#menu-btn-selected{
+    -fx-background-color: #3452b5;
+    -fx-text-fill: #eee;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ffa600;
+}
+
+#apriori-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: #3452b5;
+}
+
+#apriori-btn:hover{
+    -fx-background-color: #ffa60032;
+}
+
+#apriori-btn-selected{
+    -fx-background-color: #ffa600;
+    -fx-text-fill: #3452b5;
+}
+
+.rounded-btn{
+    -fx-background-radius: 16;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color:  #3452b5;
+    -fx-size:48px;
+}
+
+.table-view .column-header-background{
+    -fx-background-radius: 16;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+.table-view .cell{
+    -fx-cell-size: 48;
+    -fx-background-color: white;
+    -fx-text-fill: #ffa600;
+    -fx-alignment: CENTER;
+    -fx-font-size: 16;
+    -fx-font-family: consolas
+
+}
+.table-row-cell:selected {
+    -fx-background-color: whitesmoke;
+    -fx-text-background-color:  #ffa600;
+    -fx-size:48px;
+
+}
+
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive( #3452b5,80%);
+
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #3452b5,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+
+/* Styling the slider track */
+.jfx-slider > .track {
+    -fx-background-color: #ddd;
+}
+
+/* Styling the slider thumb */
+.jfx-slider > .thumb {
+    -fx-background-color: #ffa600;
+}
+
+/* Styling the filled track */
+.jfx-slider > .colored-track {
+    -fx-background-color: #ffa600;
+}
+
+/* Styling the animated thumb */
+.jfx-slider > .animated-thumb {
+    -fx-background-color: #ffa600;
+}
+
+/* Styling the slider value text inside animated thumb */
+.jfx-slider .slider-value {
+    -fx-fill: white;
+    -fx-stroke: white;
+}
+
+#alert-btn {
+    -fx-background-color: #3452b5;
+    -fx-text-fill: #F2F2F2;
+    -fx-background-radius: 16;
+}
+
+.jfx-text-area {
+    text-area-background: #3452b5 ;
+    -fx-text-fill: #eee;
+    -fx-prompt-text-fill: #eeeeee70;
+    -fx-font-family: consolas;
+}
+
+.jfx-text-area .content {
+    -fx-background-color: text-area-background ;
+    -fx-padding: 8;
+}
+
+.jfx-spinner .arc {
+    -fx-stroke: #ffa600;
+    -fx-stroke-width: 4
+}
+
+.jfx-spinner .percentage {
+    -fx-fill: #ffa600
+}
